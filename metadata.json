@@ -1,0 +1,6 @@
+{
+  "name": "Apex Markets",
+  "description": "High-velocity dark-mode financial markets terminal with live quotes, interactive OHLCV charts, watchlists, and portfolio execution.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

@@ -1,0 +1,78 @@
+@import "tailwindcss";
+
+@theme {
+  --font-display: "Space Grotesk", ui-sans-serif, system-ui, sans-serif;
+  --font-sans: "DM Sans", ui-sans-serif, system-ui, sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, Menlo, monospace;
+
+  --color-canvas: #0f131e;
+  --color-canvas-alt: #131722;
+  --color-surface: #1e222d;
+  --color-surface-low: #171b26;
+  --color-surface-raised: #242835;
+  --color-surface-high: #262a35;
+  --color-surface-bright: #353945;
+
+  --color-border-subtle: #2a2e39;
+  --color-border-bold: #363a45;
+
+  --color-text-primary: #d1d4dc;
+  --color-text-secondary: #787b86;
+  --color-on-surface: #dfe2f2;
+
+  --color-accent: #2962ff;
+  --color-accent-tint: #b6c4ff;
+  --color-market-up: #089981;
+  --color-market-down: #f23645;
+}
+
+@layer base {
+  html,
+  body {
+    background-color: #0f131e;
+    color: #d1d4dc;
+    font-family: var(--font-sans);
+    font-feature-settings: "cv02", "cv03", "cv04", "cv11";
+    -webkit-tap-highlight-color: transparent;
+  }
+
+  /* Strict tabular numerals for all numerical & financial data */
+  .tabular-nums {
+    font-variant-numeric: tabular-nums lining-nums;
+  }
+}
+
+/* Hide scrollbars for horizontal asset class strips */
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+/* Subtle institutional scrollbar for desktop data tables */
+.apex-scroll::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+.apex-scroll::-webkit-scrollbar-track {
+  background: #0f131e;
+}
+.apex-scroll::-webkit-scrollbar-thumb {
+  background: #2a2e39;
+  border-radius: 3px;
+}
+.apex-scroll::-webkit-scrollbar-thumb:hover {
+  background: #363a45;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
